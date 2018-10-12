@@ -1,0 +1,310 @@
+<html>
+ <head>
+   <title>Window experiments</title>
+   <meta charset="utf-8" />
+   <link rel="stylesheet" type="text/css" href="style.css" />
+   <script language="JavaScript" src="scripts.js" type="text/javascript"></script>
+ </head>
+ <body onmousedown="++mouseDown; checkWindows();" onmouseup="--mouseDown; if (!mouseDown) {var fw = document.getElementById('base'); fw.style.cursor = 'default';}" onmousemove="changeCursor(); checkResizing();" onload="resizeWindow(665,330); setInterval(function(){loadReady5();},2100);">
+ <div class="notification" id="notification"></div>
+ <div id="container">
+   <div class="hbase" id="hbase">
+     <div class="hbase2">
+       <div class="hbase3">
+         <div class="hbase4">
+           <div class="hbase5">
+             <div class="htitle" id="htitle" onmousedown='wdrag.startMoving(document.getElementById("hbase"),"container",event);' onmouseup='wdrag.stopMoving("container");'>
+             </div>
+             <div class="minimizebtnbgia" id="minimizebtnbgia">
+               <div class="minimizebtnbasep" onmouseup="restoreWindow();">
+                <div class="minimizebtnbase2p">
+                  <div class="minimizebtnbase3p">
+                    <div class="minimizebtnbase4p">
+                      <div class="restorepic1">
+                        <div class="restorepic2">
+                        </div>
+                      </div>
+                      <div class="restorepic3">
+                        <div class="restorepic2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a id="minimizebtn"><div class="minimizebtnbase">
+                <div class="minimizebtnbase2">
+                  <div class="minimizebtnbase3">
+                    <div class="minimizebtnbase4">
+                      <div class="restorepic1">
+                        <div class="restorepic2">
+                        </div>
+                      </div>
+                      <div class="restorepic3">
+                        <div class="restorepic2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+
+              <div class="maximizebtnbasep" onmouseup="restoreWindow(); maximizeWindow();">
+               <div class="maximizebtnbase2p">
+                 <div class="maximizebtnbase3p">
+                   <div class="maximizebtnbase4p">
+                     <div class="restorepic1">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="restorepic3">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="maximizepic1">
+                       <div class="maximizepic2">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <a id="maximizebtn"><div class="maximizebtnbase">
+               <div class="maximizebtnbase2">
+                 <div class="maximizebtnbase3">
+                   <div class="maximizebtnbase4">
+                     <div class="restorepic1">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="restorepic3">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="maximizepic1">
+                       <div class="maximizepic2">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div></a>
+            </div>
+
+             <div class="closebtnbgia" id="closebtnbgia">
+               <div class="closebtnbasep" onmouseup="removeWindow();">
+                <div class="closebtnbase2p">
+                  <div class="closebtnbase3p">
+                    <div class="closebtnbase4p">
+                      <div class="closepic">
+                        <div class="closepicl1">
+                        </div>
+                        <div class="closepicl2">
+                        </div>
+                        <div class="closepicl3">
+                        </div>
+                        <div class="closepicu1">
+                        </div>
+                        <div class="closepicu2">
+                        </div>
+                        <div class="closepicr1">
+                        </div>
+                        <div class="closepicr2">
+                        </div>
+                        <div class="closepicr3">
+                        </div>
+                        <div class="closepicb1">
+                        </div>
+                        <div class="closepicb2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a id="closebtn"><div class="closebtnbase">
+                <div class="closebtnbase2">
+                  <div class="closebtnbase3">
+                    <div class="closebtnbase4">
+                      <div class="closepic">
+                        <div class="closepicl1">
+                        </div>
+                        <div class="closepicl2">
+                        </div>
+                        <div class="closepicl3">
+                        </div>
+                        <div class="closepicu1">
+                        </div>
+                        <div class="closepicu2">
+                        </div>
+                        <div class="closepicr1">
+                        </div>
+                        <div class="closepicr2">
+                        </div>
+                        <div class="closepicr3">
+                        </div>
+                        <div class="closepicb1">
+                        </div>
+                        <div class="closepicb2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <script>
+    var vhbase = document.getElementById("hbase");
+    vhbase.style.top = height - 24 + 'px';
+   </script>
+   <div class="base" id="base">
+     <div class="base2" id="base2">
+       <div class="base3" id="base3">
+         <div class="base4" id="base4">
+           <div class="base5" id="base5">
+
+             <div class="title" id="title" onmousedown='var fwc = getComputedStyle(document.getElementById("base")); if (fwc.cursor != "default") {return true;} wdrag.startMoving(document.getElementById("base"),"container",event);' onmouseup='wdrag.stopMoving("container");'>
+             </div>
+
+             <div class="minimizebtnbg" id="minimizebtnbg">
+               <div class="minimizebtnbasep" onmouseup="minimizeWindow();">
+                <div class="minimizebtnbase2p">
+                  <div class="minimizebtnbase3p">
+                    <div class="minimizebtnbase4p">
+                      <div class="minimizepic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a id="minimizebtn"><div class="minimizebtnbase">
+                <div class="minimizebtnbase2">
+                  <div class="minimizebtnbase3">
+                    <div class="minimizebtnbase4">
+                      <div class="minimizepic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+
+              <div class="maximizebtnbasep" onmouseup="maximizeWindow();">
+               <div class="maximizebtnbase2p">
+                 <div class="maximizebtnbase3p">
+                   <div class="maximizebtnbase4p">
+                     <div class="restorepic1">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="restorepic3">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="maximizepic1" id="mpp">
+                       <div class="maximizepic2">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <a id="maximizebtn"><div class="maximizebtnbase">
+               <div class="maximizebtnbase2">
+                 <div class="maximizebtnbase3">
+                   <div class="maximizebtnbase4">
+                     <div class="restorepic1">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="restorepic3">
+                       <div class="restorepic2">
+                       </div>
+                     </div>
+                     <div class="maximizepic1" id="mp">
+                       <div class="maximizepic2">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div></a>
+            </div>
+
+             <div class="closebtnbg" id="closebtnbg">
+               <div class="closebtnbasep" onmouseup="removeWindow();">
+                <div class="closebtnbase2p">
+                  <div class="closebtnbase3p">
+                    <div class="closebtnbase4p">
+                      <div class="closepic">
+                        <div class="closepicl1">
+                        </div>
+                        <div class="closepicl2">
+                        </div>
+                        <div class="closepicl3">
+                        </div>
+                        <div class="closepicu1">
+                        </div>
+                        <div class="closepicu2">
+                        </div>
+                        <div class="closepicr1">
+                        </div>
+                        <div class="closepicr2">
+                        </div>
+                        <div class="closepicr3">
+                        </div>
+                        <div class="closepicb1">
+                        </div>
+                        <div class="closepicb2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a id="closebtn"><div class="closebtnbase">
+                <div class="closebtnbase2">
+                  <div class="closebtnbase3">
+                    <div class="closebtnbase4">
+                      <div class="closepic">
+                        <div class="closepicl1">
+                        </div>
+                        <div class="closepicl2">
+                        </div>
+                        <div class="closepicl3">
+                        </div>
+                        <div class="closepicu1">
+                        </div>
+                        <div class="closepicu2">
+                        </div>
+                        <div class="closepicr1">
+                        </div>
+                        <div class="closepicr2">
+                        </div>
+                        <div class="closepicr3">
+                        </div>
+                        <div class="closepicb1">
+                        </div>
+                        <div class="closepicb2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+			
+			<div class="blink" id="blink"></div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <body>
+</html>
